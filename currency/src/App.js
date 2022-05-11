@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Coin from "./Components/Coin";
-import Card from "./Components/UI/Card"
 function App() {
   const [coins, setCoins] = useState([]);
   useEffect(() => {
@@ -13,7 +12,6 @@ function App() {
     const api = await fetch(url);
     const data = await api.json();
     setCoins(data);
-    console.log(data);
   };
   return (
     <div className="App">
